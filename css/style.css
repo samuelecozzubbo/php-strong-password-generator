@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: #001632;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Header */
+h1{
+    color: #788391;
+}
+
+h2{
+    color: white;
+}
+
+.password-display{
+    background-color: #CFF4FC;
+    width: 100%;
+    min-height: 20px;
+    text-align: left;
+    border-radius: 5px;
+    padding: 20px 40px;
+    font-size: 1.2em;
+}
+
+/* Main */
+.app{
+    background-color: white;
+    padding: 20px 40px;
+    font-size: 1.2em;
+}
