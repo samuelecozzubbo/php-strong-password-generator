@@ -1,6 +1,9 @@
 <?php
-
-$Password_lenght = $_GET["number"];
+if(isset($_GET["number"])){
+    $Password_lenght = $_GET["number"];
+}else{
+    $Password_lenght = 0;
+}
 /* var_dump($Password_lenght); */
 
 function generatePassword($Password_lenght){
@@ -16,12 +19,12 @@ function generatePassword($Password_lenght){
     $randomPassword='';
     for ($i=1 ; $i <= $Password_lenght ; $i++){
         /* var_dump($ArrayWithAllCharacter[$i]); */
-        $randomPassword += $ArrayWithAllCharacter[$i];
+        $randomPassword .= $ArrayWithAllCharacter[$i];
     }
-echo $randomPassword;
+    return $randomPassword;
+/* echo $randomPassword; */
 }
 
-echo generatePassword($Password_lenght);
 
 
 
@@ -35,6 +38,7 @@ include __DIR__ . '/partials/head.php';
             <h2>Genera una password sicura</h2>
             <div class="password-display">
                 <div>Generare una password compresa fra 8 e 32</div>
+                <div><?php echo generatePassword($Password_lenght) ?></div>
             </div>
         </header>
         <main class="container app">
