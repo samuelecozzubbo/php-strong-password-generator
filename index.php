@@ -11,9 +11,17 @@ function generatePassword($Password_lenght){
     $symbols = ['!', '?', '&', '%', '$', '<', '>', '^', '+', '-', '*', '/', '(', ')', '[', ']', '{', '}', '@', '#', '_', '='];
 
     $ArrayWithAllCharacter = array_merge($lowercase, $uppercase, $numbers, $symbols);
-
-
+    shuffle($ArrayWithAllCharacter);
+    /* Generazione password */
+    $randomPassword='';
+    for ($i=1 ; $i <= $Password_lenght ; $i++){
+        /* var_dump($ArrayWithAllCharacter[$i]); */
+        $randomPassword += $ArrayWithAllCharacter[$i];
+    }
+echo $randomPassword;
 }
+
+echo generatePassword($Password_lenght);
 
 
 
